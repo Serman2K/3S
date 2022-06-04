@@ -47,6 +47,13 @@
         }
       }
     </style>
+
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+    </script>
+
   </head>
 
   <body>
@@ -80,7 +87,7 @@
 
 <main>
 
-  <section class="py-5 text-center container">
+  <section class="py-5 text-start container">
     <div class="row py-lg-5">
         <div class="col">
         <h1 class="fw-light mt-5" style="text-align: center;">Zajęcia 1</h1>
@@ -89,7 +96,7 @@
         </div>
 
             <div class="row container">
-                <form class="bg-white px-5" action="">
+                <form class="px-5 mb-4" action="">
                     <p class="fw-bold" style="text-align: left;">1. Jak dobrze rozumiesz zagadnienie XYZ?</p>
                     
                     <div class="form-check mb-2 w-25">
@@ -110,10 +117,72 @@
                             Słabo
                         </label>
                     </div>
-                </form>
+                    <p class="fw-bold" style="text-align: left;">2. Które z wymienionych zagadnień myślisz że opanowałeś/aś?</p>
+                    <div class="form-check mb-2 w-25">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Zagadnienie Pierwsze
+                      </label>
+                    </div>
+                
+                    <div class="form-check mb-2 w-25">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+                      <label class="form-check-label" for="flexCheckDefault2">
+                        Zagadnienie Drugie
+                      </label>
+                    </div>
+                
+                    <div class="form-check mb-2 w-25">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" />
+                      <label class="form-check-label" for="flexCheckDefault3">
+                        Zagadnienie Trzecie
+                      </label>
+                    </div>
+
+                    <div class="form-check mb-2 w-25">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" />
+                      <label class="form-check-label" for="flexCheckDefault3">
+                        Zagadnienie Czwarte
+                      </label>
+                    </div>
+
+                    <div class="form-check mb-2 w-25">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" />
+                      <label class="form-check-label" for="flexCheckDefault3">
+                        Zagadnienie Piąte
+                      </label>
+                    </div>
+
+                    <p class="fw-bold" style="text-align: left;">3. Sugestie dotyczące prowadzenia zajęć możesz wpisać poniżej</p>
+
+                    <div class="form-outline mb-4 w-50">
+                        <textarea class="form-control" id="form4Example6" rows="6"></textarea>
+                    </div>
+                  </form>
                 <div class="text-center">
-                    <button type="button" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Prześlij Odpowiedzi</button>
                 </div>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
             </div>
 
       </div>
