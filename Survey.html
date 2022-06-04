@@ -6,7 +6,8 @@
     <meta name="description" content="">
     <title>3S: Survey</title>
     <link rel="icon" type="favicon" href="Pictures/favicon.ico">
-
+    
+    <link href="BootStrapCSS/modal.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <style>
@@ -47,12 +48,6 @@
         }
       }
     </style>
-
-    <script>
-        $('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
-    </script>
 
   </head>
 
@@ -159,30 +154,23 @@
                         <textarea class="form-control" id="form4Example6" rows="6"></textarea>
                     </div>
                   </form>
-                <div class="text-center">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Prześlij Odpowiedzi</button>
-                </div>
 
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          ...
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+            </div>  
 
+            <div class="text-center">
+                <button id="modalBtn" class="btn btn-primary">Prześlij Odpowiedzi</button>
+            </div>
+            
+            <div id="modal" class="modal">
+            
+                <!-- Zawartość -->
+                <div class="modal-content w-25">
+                    <h2>Wysłano</h2>
+                    <p class="lead text-muted">Twoje odpowiedzi zostały przesłane</p>
+                    <button class="btn btn-primary" onclick="window.location.href='Przedmiot.html'">Wróć do
+                        kursu</button>
+                </div>
+            
             </div>
 
       </div>
@@ -190,9 +178,11 @@
   </section>
 
 </main>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
       
+<script src="JavaScriptJS/Modal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
   </body>
 </html>
